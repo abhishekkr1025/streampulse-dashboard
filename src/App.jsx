@@ -3,6 +3,7 @@ import { Sidebar  } from "./components/Sidebar"
 import { Overview } from "./pages/Overview"
 import { Orders   } from "./pages/Orders"
 import { Fraud    } from "./pages/Fraud"
+import { AskData } from "./pages/AskData"
 
 export default function App() {
   const [page, setPage] = useState("overview")
@@ -31,6 +32,7 @@ export default function App() {
         {page === "overview" && <Overview />}
         {page === "orders"   && <Orders   />}
         {page === "fraud"    && <Fraud    />}
+        {page === "askdata" && <AskData />}
       </div>
     </div>
   )
