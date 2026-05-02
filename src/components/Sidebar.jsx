@@ -1,7 +1,9 @@
 const NAV = [
-  { id: "overview",  label: "Overview"     },
-  { id: "orders",    label: "Orders"       },
-  { id: "fraud",     label: "Fraud alerts" },
+  { id: "overview", label: "Overview"      },
+  { id: "orders",   label: "Orders"        },
+  { id: "fraud",    label: "Fraud alerts"  },
+  { id: "failed",   label: "Failed events" },
+  { id: "askdata",  label: "Ask your data" },
 ]
 
 export function Sidebar({ page, setPage }) {
