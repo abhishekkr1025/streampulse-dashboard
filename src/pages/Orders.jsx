@@ -1,6 +1,6 @@
 import { usePolling } from "../hooks/usePolling"
 
-const API = "https://streaming-api-516957530164.asia-south1.run.app"
+const API = "https://unafflicted-miesha-maternally.ngrok-free.dev"
 
 export function Orders() {
   const { data: products } = usePolling(`${API}/api/top-products`, 10000)

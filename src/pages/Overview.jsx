@@ -6,7 +6,7 @@ import {
   Tooltip, ResponsiveContainer
 } from "recharts"
 
-const API = "https://streaming-api-516957530164.asia-south1.run.app"
+const API = "https://unafflicted-miesha-maternally.ngrok-free.dev"
 const TT  = {
   contentStyle: {
     background: "#1e1e2e", border: "1px solid #2a2a3e",

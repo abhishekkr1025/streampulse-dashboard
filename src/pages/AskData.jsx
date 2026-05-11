@@ -4,7 +4,7 @@ import { QueryInput  }  from "../components/QueryInput"
 import { ResultTable }  from "../components/ResultTable"
 import { ResultChart }  from "../components/ResultChart"
 
-const API = "https://streaming-api-516957530164.asia-south1.run.app"
+const API = "https://unafflicted-miesha-maternally.ngrok-free.dev"
 
 export function AskData() {
   const [loading, setLoading] = useState(false)
@@ -20,7 +20,9 @@ export function AskData() {
     try {
       const res  = await fetch(`${API}/api/ask`, {
         method:  "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json",
+          "ngrok-skip-browser-warning": "true"
+         },
         body:    JSON.stringify({ question })
       })
       if (!res.ok) {

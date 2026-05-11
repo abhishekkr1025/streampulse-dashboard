@@ -9,7 +9,9 @@ export function usePolling(url, interval = 5000) {
     let cancelled = false
     const fetch_ = async () => {
       try {
-        const res  = await fetch(url)
+        const res  = await fetch(url, {
+          headers: { "ngrok-skip-browser-warning": "true" }
+        })
         const json = await res.json()
         if (!cancelled) { setData(json); setLoading(false) }
       } catch (e) {

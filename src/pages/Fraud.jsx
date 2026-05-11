@@ -1,6 +1,6 @@
 import { usePolling } from "../hooks/usePolling"
 
-const API = "https://streaming-api-516957530164.asia-south1.run.app"
+const API = "https://unafflicted-miesha-maternally.ngrok-free.dev"
 
 export function Fraud() {
   const { data: alerts  } = usePolling(`${API}/api/fraud-alerts`,  5000)
