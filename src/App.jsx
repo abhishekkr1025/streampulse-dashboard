@@ -5,8 +5,10 @@ import { Orders   } from "./pages/Orders"
 import { Fraud    } from "./pages/Fraud"
 import { AskData } from "./pages/AskData"
 
+
 export default function App() {
   const [page, setPage] = useState("overview")
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <div style={{
@@ -25,7 +27,12 @@ export default function App() {
         ::-webkit-scrollbar-thumb { background: #2a2a3e; border-radius: 2px; }
       `}</style>
 
-      <Sidebar page={page} setPage={setPage} />
+      <Sidebar
+  page={page}
+  setPage={setPage}
+  mobileOpen={mobileOpen}
+  setMobileOpen={setMobileOpen}  // ← this was likely missing
+/>
 
       <div style={{ flex: 1, padding: "28px 32px",
                     minWidth: 0, overflowY: "auto" }}>
