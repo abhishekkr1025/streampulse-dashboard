@@ -44,8 +44,10 @@ export function ResultTable({ columns, rows }) {
                   whiteSpace: "nowrap",
                 }}>
                   {typeof row[col] === "number"
-                    ? row[col].toLocaleString()
-                    : String(row[col] ?? "")}
+  ? col.includes("revenue") || col.includes("amount") || col.includes("spend")
+    ? `₹${row[col].toLocaleString("en-IN")}`
+    : row[col].toLocaleString()
+  : String(row[col] ?? "")}
                 </td>
               ))}
             </tr>
