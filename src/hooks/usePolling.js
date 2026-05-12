@@ -7,18 +7,17 @@ export function usePolling(url, interval = 5000) {
 
   useEffect(() => {
     let cancelled = false
-
     const fetch_ = async () => {
       try {
-        const urlWithParam = url + (url.includes("?") ? "&" : "?") + "ngrok-skip-browser-warning=true"
-        const res = await fetch(urlWithParam)
+        const res  = await fetch(url, {
+          headers: { "ngrok-skip-browser-warning": "true" }
+        })
         const json = await res.json()
         if (!cancelled) { setData(json); setLoading(false) }
       } catch (e) {
         if (!cancelled) setError(e.message)
       }
     }
-
     fetch_()
     const id = setInterval(fetch_, interval)
     return () => { cancelled = true; clearInterval(id) }
